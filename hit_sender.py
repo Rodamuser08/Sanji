@@ -21,7 +21,7 @@ def send(cc, last, username, time_taken):
         bank = emj = do = dicr = typ = 'Unknown'
 
     msg1 = f"""
-𝗚𝗔𝗧𝗘𝗪𝗔𝗬 ➜ Payway Charge        
+𝗚𝗔𝗧𝗘𝗪𝗔𝗬 ➜ SanjiPay $1.00        
 
 𝗥𝗘𝗦𝗣𝗢𝗡𝗦𝗘 ➜ {last}             
 𝗖𝗖 ➜ <code>{cc}</code>       
@@ -34,4 +34,3 @@ Check by @{username}
 𝗕𝗼𝘁 𝗯𝘆: @strawhatchannel96
 """
     return msg1
-
