@@ -38,7 +38,7 @@ def check_card(message):
             last = 'Error while making payment'
         print(last)
         
-        if "Transaction succesfully completed" in last:
+        if "Thank you for your payment! We will confirm reciept shortly" in last:
         	last = 'Payment Successful 🔥'
 
         time_taken = round(time.time() - start_time, 2)
