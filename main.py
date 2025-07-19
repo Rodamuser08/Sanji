@@ -12,10 +12,10 @@ with open('token.txt', 'r') as token_file:
 
 bot = TeleBot(token, parse_mode="HTML") 
 
-@bot.message_handler(commands=['pw'])
+@bot.message_handler(commands=['sj'])
 def check_card(message):
    try:
-        cc = message.text.split('/pw', 1)[1].strip()
+        cc = message.text.split('/sj', 1)[1].strip()
         user_id = message.from_user.id
         username = message.from_user.username or "NoUsername"
 
@@ -38,7 +38,7 @@ def check_card(message):
             last = 'Error while making payment'
         print(last)
         
-        if "Thank you for your payment! We will confirm reciept shortly" in last:
+        if "Thank you for your donation!" in last:
         	last = 'Payment Successful 🔥'
 
         time_taken = round(time.time() - start_time, 2)
