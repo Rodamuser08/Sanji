@@ -39,7 +39,7 @@ def check_card(message):
         print(last)
         
         if "Payment Successful!" in last:
-        	last = 'Paid $1.00 🔥'
+        	last = 'Donated $1.00 🔥'
 
         time_taken = round(time.time() - start_time, 2)
 
