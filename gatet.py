@@ -21,6 +21,9 @@ def Tele(ccx):
 	random_amount1 = random.randint(1, 9)
 	random_amount2 = random.randint(1, 99)
 	
+	first = ["John", "Emily", "Alex", "Nico", "Tom", "Sarah", "Liam"]
+	last = ["Smith", "Johnson", "Miller", "Brown", "Davis", "Wilson", "Moore"]
+	
 	cookies = {
 	    'PHPSESSID': '4142f3c37c6efb05b389d2861d',
 	}
@@ -84,8 +87,8 @@ def Tele(ccx):
 	data = {
 	    'formField_donation_select': 'other',
 	    'formField_other_amount': '1',
-	    'formField_bill_firstname': 'Rodam',
-	    'formField_bill_lastname': 'User',
+	    'formField_bill_firstname': f'{first}',
+	    'formField_bill_lastname': f'{last}',
 	    'formField_bill_address1': 'Street 27',
 	    'formField_bill_city': 'New York',
 	    'formField_bill_state': 'NY',
@@ -98,7 +101,7 @@ def Tele(ccx):
 	    'formField_Comments': '',
 	    'formPayment_method': 'Credit Card',
 	    'formPayment_card': f'{type}',
-	    'formPayment_owner': 'Rodam User',
+	    'formPayment_owner': f'{first} {last}',
 	    'formPayment_number': f'{n}',
 	    'formPayment_cvv': f'{cvc}',
 	    'formMeta_formPayment_expiration': 'expiration',
