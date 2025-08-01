@@ -1,5 +1,6 @@
 import requests,re
 import random
+import string
 from proxy import reqproxy, make_request
 def Tele(ccx):
 	proxy_str = "brd.superproxy.io:33335:brd-customer-hl_d4a33102-zone-scrapping:brgtmv5nyk7u"
@@ -21,8 +22,17 @@ def Tele(ccx):
 	random_amount1 = random.randint(1, 9)
 	random_amount2 = random.randint(1, 99)
 	
-	first = ["John", "Emily", "Alex", "Nico", "Tom", "Sarah", "Liam"]
-	last = ["Smith", "Johnson", "Miller", "Brown", "Davis", "Wilson", "Moore"]
+	random1 = random.choice(string.ascii_letters)
+	random2 = random.choice(string.ascii_letters)
+	random3 = random.choice(string.ascii_letters)
+	random4 = random.choice(string.ascii_letters)
+	random5 = random.choice(string.ascii_letters)
+	random6 = random.choice(string.ascii_letters)
+	random7 = random.choice(string.ascii_letters)
+	random8 = random.choice(string.ascii_letters)
+	
+	first = f'{random1}{random2}{random3}{random4}'
+	last = f'{random5}{random6}{random7}{random8}'
 	
 	cookies = {
 	    'PHPSESSID': '4142f3c37c6efb05b389d2861d',
@@ -97,7 +107,7 @@ def Tele(ccx):
 	    'formField_Affiliation': 'Other',
 	    'formField_class_year': '1',
 	    'formField_Phone': '4303000850',
-	    'formField_Email': 'genpaypal01@gmail.com',
+	    'formField_Email': f'genpaypal{random_amount1}{random_amount2}@gmail.com',
 	    'formField_Comments': '',
 	    'formPayment_method': 'Credit Card',
 	    'formPayment_card': f'{type}',
