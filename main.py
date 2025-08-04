@@ -38,8 +38,8 @@ def check_card(message):
             last = 'Error while making payment'
         print(last)
         
-        if "Thank you for your donation!" in last:
-        	last = 'Payment successful 🔥'
+        if "gift receipt will be sent to you via email" in last:
+        	last = 'Random Amount Charged 🔥'
 
         time_taken = round(time.time() - start_time, 2)
 
