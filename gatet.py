@@ -1,6 +1,5 @@
 import requests,re
 import random
-import string
 from proxy import reqproxy, make_request
 def Tele(ccx):
 	proxy_str = "brd.superproxy.io:33335:brd-customer-hl_d4a33102-zone-scrapping:brgtmv5nyk7u"
