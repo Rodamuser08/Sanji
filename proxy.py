@@ -48,4 +48,3 @@ def make_request(url):
     except requests.RequestException as e:
         print(f"Request failed: {e}")
         return None
-
